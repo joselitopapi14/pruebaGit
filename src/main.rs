@@ -3,6 +3,7 @@ use std::io;
 fn primera_vez(){
     let mut a = String::new();
     let mut b = String::new();
+    let mut c = String::new();
 
     println!("Ingrese el primer número");
     io::stdin()
@@ -16,7 +17,13 @@ fn primera_vez(){
         .expect("Locochon");
     let b: u32 = b.trim().parse().expect("ingrese un numero correcto");
 
-    println!("{}",a*b);
+    println!("Ingrese el tercer número");
+    io::stdin()
+        .read_line(&mut c)
+        .expect("Locochon");
+    let c: u32 = c.trim().parse().expect("ingrese un numero correcto");
+
+    println!("{}",a*b*c);
 }
 
 fn main() {
